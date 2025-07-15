@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: rajnginxaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rajnginxaks
+  template:
+    metadata:
+      labels:
+        app: rajnginxaks 
+    spec:
+      containers:
+        - name: rajnginxaks 
+          image: rajconacrforaks.azurecr.io/rajnginxaks
+          ports:
+          - containerPort: 80
