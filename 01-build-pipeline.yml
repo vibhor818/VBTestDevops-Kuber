@@ -3,26 +3,26 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
-- main
+- master
 
 resources:
 - repo: self
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'e855a619-237a-4a83-b506-6dee53f8c0ea'
+  dockerRegistryServiceConnection: '6a8843fd-7313-48e2-9381-3f9ef59ce82d'
   imageRepository: 'app1/app1nginx'
-  containerRegistry: 'vibhoraksconreg.azurecr.io'
+  containerRegistry: 'aksdevopsacr.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
-
+  
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
 stages:
 - stage: Build
   displayName: Build and push stage
-  jobs:
+  jobs:  
   - job: Build
     displayName: Build
     pool:
