@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vbapp1aginxwithaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vbapp1aginxwithaks
+  template:
+    metadata:
+      labels:
+        app: vbapp1aginxwithaks 
+    spec:
+      containers:
+        - name: vbapp1aginxwithaks 
+          image: vibhoraksconreg.azurecr.io/vbapp1aginxwithaks
+          ports:
+          - containerPort: 80
