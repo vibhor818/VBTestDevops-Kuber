@@ -11,7 +11,7 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'e855a619-237a-4a83-b506-6dee53f8c0ea'
-  imageRepository: 'vbnginxpro'
+  imageRepository: 'app1/app1nginx'
   containerRegistry: 'vibhoraksconreg.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
